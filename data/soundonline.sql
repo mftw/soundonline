@@ -5,9 +5,14 @@
 # http://www.sequelpro.com/
 # https://github.com/sequelpro/sequelpro
 #
-# Host: sql.itcn.dk (MySQL 5.6.24-log)
-# Database: heka5.tcaa
 # Generation Time: 2019-03-25 07:32:14 +0000
+#
+# Host: sql.itcn.dk:3306
+# Brugernavn: mich655r.SKOLE
+# Password: Thh3hRT608
+# 
+# Database-navn(e):
+#      mich655r2.SKOLE
 # ************************************************************
 
 
