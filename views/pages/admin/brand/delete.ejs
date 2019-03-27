@@ -1,0 +1,55 @@
+<% include ../../../partials/header %>
+
+<div id="delete"></div>
+
+<script>
+
+    const id = <%= id %>;
+    const url = '/api/brands/' + id;
+
+    fetch(url)
+    .then(data => {
+        return data.json()
+    })
+    .then(data => {
+        const message = `<p> Vil du slette mærket <i>${data[0].title}</i> fra databasen? </p>
+                        <button id="delsubmit" class="btn btn-danger">Slet</button>`
+        document.getElementById('delete').innerHTML = message;
+    })
+
+    document.getElementById('delsubmit').onclick = () => {
+        const del_url = "/api/brand/delete" + id;
+        const fetchSettings = {
+            method: 'DELETE',
+            // headers: new Headers({
+            //     'Content-Type': 'application/json'
+            // }),
+            // body: JSON.stringify({
+            //     title: form.title.value,
+            //     description: form.description.value
+            // })
+        }
+
+        fetch(del_url, fetchSettings)
+        .then(res => {
+            if(res.status === 200) {
+                console.log(res)
+                // document.location.href = '/admin/brand/list'
+            }
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }
+
+    
+    const btn = document.createElement('a');
+    btn.setAttribute('class', 'btn btn-default');
+    btn.setAttribute('href', '/admin/brand/create');
+    btn.innerHTML = 'Rediger';
+    document.getElementById('buttonpanel').appendChild(btn);
+
+</script>
+
+<% include ../../../partials/footer %>
+

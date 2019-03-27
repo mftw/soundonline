@@ -30,4 +30,22 @@ module.exports = (app) => {
             modulemode: 'Opret Ny',
         })
     })
+    
+    // PUT: Redigere brand
+    app.get('/admin/brand/update/:id', (req, res) => {
+        res.render('pages/admin/brand/update', {
+            modulename: modulename,     
+            modulemode: 'Rediger',
+            id: req.params.id,
+        })
+    })
+    
+    // DELETE: Slet brand
+    app.get('/admin/brand/update/:id', (req, res) => {
+        res.render('pages/admin/brand/update', {
+            modulename: modulename,     
+            modulemode: 'Slet mærke',
+            id: req.params.id,
+        })
+    })
 }
