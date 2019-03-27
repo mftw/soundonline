@@ -17,23 +17,23 @@ module.exports = (app) => {
         // res.sendStatus(200);
     });
 
-    //Get single product
-    app.get('/api/:id', (req, res) => {
-        res.sendStatus(200);
-    })
+    // //Get single product
+    // app.get('/api/:id', (req, res) => {
+    //     res.sendStatus(200);
+    // })
     
-    //Add new item
-    app.post('/api/', (req, res) => {
-        res.sendStatus(200);
-    })
+    // //Add new item
+    // app.post('/api/', (req, res) => {
+    //     res.sendStatus(200);
+    // })
     
-    //Update item
-    app.put('/api/:id', (req, res) => {
-        res.sendStatus(200);
-    })
+    // //Update item
+    // app.put('/api/:id', (req, res) => {
+    //     res.sendStatus(200);
+    // })
     
-    //Delete item
-    app.delete('/api/:id', (req, res) => {
-        res.sendStatus(200);
-    })
+    // //Delete item
+    // app.delete('/api/:id', (req, res) => {
+    //     res.sendStatus(200);
+    // })
 }
