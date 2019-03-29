@@ -2,21 +2,21 @@
 
 // const mysql = require('../../config/mysql')();
 
-const modulename = 'Brands';
+const modulename = 'Product';
 
 module.exports = (app) => {
     // GET: list of brands
-    app.get('/admin/brand/list', (req, res) => {
+    app.get('/admin/product/list', (req, res) => {
         // console.log(arguments);
-        res.render('pages/admin/brand/index', {
+        res.render('pages/admin/product/index', {
             modulename: modulename,     
             modulemode: 'Oversigt'
         })
     })
 
     // GET: henter enkelt brand ud fra id
-    app.get('/admin/brand/details/:id', (req, res) => {
-        res.render('pages/admin/brand/details', {
+    app.get('/admin/product/details/:id', (req, res) => {
+        res.render('pages/admin/product/details', {
             modulename: modulename,     
             modulemode: 'Detaljer',
             id: req.params.id,
@@ -24,16 +24,16 @@ module.exports = (app) => {
     })
 
     // POST: Oprette nyt brand
-    app.get('/admin/brand/create', (req, res) => {
-        res.render('pages/admin/brand/create', {
+    app.get('/admin/product/create', (req, res) => {
+        res.render('pages/admin/product/create', {
             modulename: modulename,     
             modulemode: 'Opret Ny',
         })
     })
     
     // PUT: Redigere brand
-    app.get('/admin/brand/update/:id', (req, res) => {
-        res.render('pages/admin/brand/update', {
+    app.get('/admin/product/update/:id', (req, res) => {
+        res.render('pages/admin/product/update', {
             modulename: modulename,     
             modulemode: 'Rediger',
             id: req.params.id,
@@ -41,8 +41,8 @@ module.exports = (app) => {
     })
     
     // DELETE: Slet brand
-    app.get('/admin/brand/delete/:id', (req, res) => {
-        res.render('pages/admin/brand/delete', {
+    app.get('/admin/product/delete/:id', (req, res) => {
+        res.render('pages/admin/product/delete', {
             modulename: modulename,     
             modulemode: 'Slet mærke',
             id: req.params.id,

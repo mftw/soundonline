@@ -4,8 +4,10 @@ const port = process.env.PORT || 4000;
 
 //Set port
 app.set('port', port);
+
 //Set view directory (__dirname => DOCUMENT_ROOT)
 app.set('views', __dirname + '/views');
+
 //Set view engine to ejs
 app.set('view engine', 'ejs');
 
@@ -13,10 +15,12 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/'));
 
 //Requires
-require('./routes/index')(app);
+// require('./routes/index')(app);
 // require('./routes/brands')(app);
 require('./routes/api/brands')(app);
+require('./routes/api/products')(app);
 require('./routes/admin/brandadmin')(app);
+require('./routes/admin/productadmin')(app);
 
 
 //Angiver en listener på port 4000

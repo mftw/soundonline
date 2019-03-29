@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node -r dotenv/config app.js dotenv_config_path=./.env",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nm": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,8 @@
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "mysql": "^2.16.0"
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.10"
   },
   "devDependencies": {
     "dotenv": "^7.0.0"

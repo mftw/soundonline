@@ -43,12 +43,8 @@
         fetch(url, fetchSettings)
         .then(res => {
                 // console.log(res);
-                // document.location.href = '/admin/brand/list/newestItem';
-                // document.location.href = '/admin/brand/list';
             if(res.ok) {
                 document.location.href = '/admin/brand/list';
-                // console.log(res)
-                // document.location.href = '/admin/brands/' + res[0].test;
             } else {
                 console.log(res.statusText)
             }

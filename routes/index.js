@@ -7,15 +7,15 @@ module.exports = (app) => {
     app.use(bodyParser.json());
 
     //Get all 
-    app.get('/api/', function(req, res) {
-        // const sql = 'SELECT * FROM brand';
-        const sql = 'SELECT * FROM product';
-        mysql.query(sql, (err, rows) => {
-            return res.json(rows);
-        })
-        // res.send(response)
-        // res.sendStatus(200);
-    });
+    // app.get('/api/', function(req, res) {
+    //     // const sql = 'SELECT * FROM brand';
+    //     const sql = 'SELECT * FROM product';
+    //     mysql.query(sql, (err, rows) => {
+    //         return res.json(rows);
+    //     })
+    //     // res.send(response)
+    //     // res.sendStatus(200);
+    // });
 
     // //Get single product
     // app.get('/api/:id', (req, res) => {
